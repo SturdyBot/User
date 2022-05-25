@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/Heading_1"
+        android:textColor="#707070"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="#707070"
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/Heading_2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/text_1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:textColor="#707070"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/person"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:hint="@string/name_hint"
+        android:fontFamily="@font/noto_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_2"
+        android:autofillHints="name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:textColor="#707070"
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/email"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:hint="@string/e_mail_id_hint"
+        android:fontFamily="@font/noto_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:textColor="#707070"
+        android:id="@+id/mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:hint="@string/mobile_number_hint"
+        android:fontFamily="@font/noto_sans"
+        android:autofillHints="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:inputType="phone" />
+
+    <EditText
+        android:textColor="#707070"
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        android:hint="@string/password_hint"
+        android:fontFamily="@font/noto_sans"
+        android:autofillHints="password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_number"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eye"
+        android:layout_marginTop="45dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@id/mobile_number"
+        app:layout_constraintRight_toRightOf="@id/password"
+        android:contentDescription="@string/view_password"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:textColor="#707070"
+        android:id="@+id/confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        android:hint="@string/confirm_password_hint"
+        android:fontFamily="@font/noto_sans"
+        android:autofillHints="password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eye"
+        android:layout_marginTop="45dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintRight_toRightOf="@id/confirm_password"
+        android:contentDescription="@string/view_password"
+        tools:ignore="RtlSymmetry" />
+
+<soup.neumorphism.NeumorphButton
+    android:id="@+id/register_button"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/confirm_password"
+    android:padding="30dp"
+    android:textSize="18sp"
+    app:neumorph_shadowColorLight="@color/white"
+    app:neumorph_shadowColorDark="#c9c9c9"
+    android:layout_marginTop="35dp"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:text="@string/register_button"
+    app:neumorph_backgroundColor="#F3AA4E"
+    android:focusable="true" />
+
+    <TextView
+        android:id="@+id/Login"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/noto_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/already_have_an_account_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

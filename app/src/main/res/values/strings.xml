@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">User</string>
+    <string name="Heading_1">Register in to get started</string>
+    <string name="Heading_2">Experience the all new App!</string>
+    <string name="name_hint">Name</string>
+    <string name="e_mail_id_hint">E-mail ID</string>
+    <string name="mobile_number_hint">Mobile Number</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="register_button">REGISTER</string>
+    <string name="already_have_an_account_login">Already have an account?<b>Login</b></string>
+    <string name="view_password">View password</string>
+    <string name="Login_text">Log in to get started</string>
+    <string name="Mobile_text">Use Mobile Number</string>
+    <string name="login_button">Login</string>
+</resources>
